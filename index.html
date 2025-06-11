@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Full Moon Horoscope Predictions | 100% Free Astrology Reading</title>
+    <meta name="description" content="Get your personalized full moon horoscope predictions with AI. 100% free astrology readings based on your name and birth date. Discover your cosmic destiny today.">
+    <meta name="keywords" content="full moon, horoscope predictions, free astrology, AI horoscope, zodiac signs, birth chart, cosmic reading, astrology forecast">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI Full Moon Horoscope Predictions | 100% Free">
+    <meta property="og:description" content="Discover your cosmic destiny with AI-powered full moon horoscope predictions. Completely free astrology readings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Full Moon Horoscope Predictions">
+    <meta name="twitter:description" content="100% Free AI-powered horoscope predictions under the full moon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="moon-icon">🌕</span>
+                <span class="logo-text">AI Full Moon</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#predictions">Predictions</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    AI Full Moon<br>
+                    <span class="gradient-text">Horoscope Predictions</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover your cosmic destiny with AI-powered astrology readings.<br>
+                    <strong class="free-badge">100% Free Forever</strong>
+                </p>
+                <button class="cta-button" onclick="scrollToForm()">
+                    Get Your Reading
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="moon-container">
+                    <div class="moon"></div>
+                    <div class="stars"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our AI Predictions?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Advanced artificial intelligence analyzes cosmic patterns to provide personalized insights.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Full Moon Energy</h3>
+                    <p>Harness the powerful energy of the full moon for enhanced spiritual guidance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>100% Free</h3>
+                    <p>No hidden fees, no subscriptions. Completely free horoscope predictions for everyone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Results</h3>
+                    <p>Get your personalized horoscope predictions immediately after entering your details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prediction Form Section -->
+    <section id="predictions" class="prediction-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Enter Your Details</h2>
+                    <p>Discover what the full moon reveals about your cosmic journey</p>
+                </div>
+                
+                <form id="horoscopeForm" class="horoscope-form">
+                    <div class="input-group">
+                        <label for="userName">Your Name</label>
+                        <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="birthDate">Birth Date</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Reveal My Destiny</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+                
+                <div id="predictionResult" class="prediction-result" style="display: none;">
+                    <div class="result-header">
+                        <h3>Your Full Moon Horoscope</h3>
+                        <div class="zodiac-icon"></div>
+                    </div>
+                    <div class="result-content">
+                        <div class="user-info">
+                            <p><strong>Name:</strong> <span id="resultName"></span></p>
+                            <p><strong>Zodiac Sign:</strong> <span id="resultZodiac"></span></p>
+                            <p><strong>Birth Date:</strong> <span id="resultBirthDate"></span></p>
+                        </div>
+                        <div class="prediction-text">
+                            <h4>Your Cosmic Reading</h4>
+                            <p id="predictionContent"></p>
+                        </div>
+                        <div class="lucky-elements">
+                            <div class="lucky-item">
+                                <strong>Lucky Color:</strong> <span id="luckyColor"></span>
+                            </div>
+                            <div class="lucky-item">
+                                <strong>Lucky Number:</strong> <span id="luckyNumber"></span>
+                            </div>
+                            <div class="lucky-item">
+                                <strong>Best Day:</strong> <span id="bestDay"></span>
+                            </div>
+                        </div>
+                        <button class="share-button" onclick="shareReading()">
+                            Share Your Reading
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About AI Full Moon Horoscope</h2>
+                    <p>Our cutting-edge AI technology combines ancient astrological wisdom with modern computational power to deliver personalized horoscope predictions during the powerful full moon phases.</p>
+                    <p>We believe everyone deserves access to cosmic guidance, which is why our service is <strong>completely free</strong> with no hidden costs or premium tiers.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Free Forever</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Happy Users</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="cosmic-circle">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="center-moon">🌕</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Full Moon</h4>
+                    <p>Your cosmic journey starts here. 100% free horoscope predictions powered by AI.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#predictions">Get Reading</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Keywords</h4>
+                    <p>Full Moon, Horoscope Predictions, Free Astrology, AI Readings, Zodiac Signs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Full Moon Horoscope Predictions. All rights reserved. | 100% Free Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
