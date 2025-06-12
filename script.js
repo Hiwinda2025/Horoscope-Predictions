@@ -204,6 +204,21 @@ function formatDate(dateString) {
     });
 }
 
+// Force English date format for the date input
+function setEnglishDateFormat() {
+    const dateInput = document.getElementById('birthDate');
+    if (dateInput) {
+        // Set additional attributes to enforce English format
+        dateInput.setAttribute('lang', 'en-US');
+        dateInput.style.direction = 'ltr';
+        
+        // Add event listener to ensure proper formatting
+        dateInput.addEventListener('focus', function() {
+            this.setAttribute('lang', 'en-US');
+        });
+    }
+}
+
 // Smooth Scrolling Function
 function scrollToForm() {
     document.getElementById('predictions').scrollIntoView({
@@ -482,6 +497,7 @@ function initializeScrollAnimations() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initializeForm();
+    setEnglishDateFormat();
     initializeAnimations();
     initializeParallax();
     initializeNavbar();

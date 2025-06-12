@@ -335,6 +335,14 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.date-format-hint {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    font-style: italic;
+}
+
 .submit-button {
     background: linear-gradient(45deg, #007aff, #5856d6);
     color: white;
@@ -469,6 +477,78 @@ body {
 .about-section {
     padding: 100px 0;
     background: rgba(255, 255, 255, 0.03);
+}
+
+/* Full Moon Information Section */
+.full-moon-info {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+}
+
+.info-content h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 122, 255, 0.3);
+}
+
+.info-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.info-item p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.moon-phases {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.moon-phases h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.moon-phases p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-content {
